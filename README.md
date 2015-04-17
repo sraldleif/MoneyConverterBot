@@ -4,3 +4,6 @@ This is the first bot I've ever made, and the first useful thing (...debatebly) 
 Basically, at the stage it's in now:
 MoneyConverterBot grabs any string in a comment that starts with '$', passes it through the converter and then replies to the comment with a table of converted results.
 So... nothing too special, but hopefully I'll be able to refine the code and add more features as I learn more about Python.
+
+Here's an example of it in action:
+http://goo.gl/ausUlt
