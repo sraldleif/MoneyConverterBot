@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
  
 r = praw.Reddit(user_agent = "Currency converter by Thorium")
-r.login('Username', 'Password')
+r.login()
  
  
 cache = []
@@ -104,7 +104,7 @@ def run_bot():
                         eur_final_string = str(eur_converted_value)
                         #------------------------------------------------------------------------------------------------------------------------------
                        
-                        final_reply = "**$%s US Dollars Converts to:**\n\n***\n\nCurrency|Converted\n:--|:--\nAUD|$ %s\nCAD|$ %s\nGBP|%s %s\nEUR|%s %s" % (money_string, aud_final_string, cad_final_string, gbp_sym, gbp_final_string, eur_sym, eur_final_string)
+                        final_reply = "**$%s USD Converts to:**\n\n***\n\nCurrency|Converted\n:--|:--\nAUD|$%s\nCAD|$%s\nGBP|%s%s\nEUR|%s%s\n\n***\n^^I ^^am ^^a ^^bot!  ^^You ^^can ^^see ^^how ^^I ^^work ^^[here](http://www.github.com/sraldleif/MoneyConverterBot)." % (money_string, aud_final_string, cad_final_string, gbp_sym, gbp_final_string, eur_sym, eur_final_string)
                         comment.reply(final_reply)
                                
 while True:
